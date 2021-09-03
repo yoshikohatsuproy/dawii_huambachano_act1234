@@ -42,21 +42,7 @@ public class AlumnoController {
 		}
 	}
 	
-	@PutMapping
-	@ResponseBody
-	public ResponseEntity<Alumno> actualizaAlumno(@RequestBody Alumno obj){
-		if (obj == null) {
-			return ResponseEntity.noContent().build();	
-		}else {
-			Optional<Alumno> optAlumno = service.obtenerPorId(obj.getIdAlumno());
-			if (optAlumno.isEmpty()) {
-				return ResponseEntity.noContent().build();
-			}else {
-				Alumno objSalida = service.insertaActualizaAlumno(obj);
-				return ResponseEntity.ok(objSalida);	
-			}
-		}
-	}
+	
 	
 	
 	
