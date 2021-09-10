@@ -12,4 +12,6 @@ public interface AlumnoService {
 	public abstract Optional<Alumno> buscaPorId(int idAlumno);
 	public abstract void eliminaPorId(int idAlumno);
 	public abstract List<Alumno> buscaPorDni(String dni);
+	
+	
 }
